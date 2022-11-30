@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Font Changer",
+  "name": "Font Customizer",
   "version": "1.0",
   "action" : {
     "default_popup": "index.html",
