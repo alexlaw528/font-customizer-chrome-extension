@@ -11,16 +11,20 @@
 </head>
 <body>
     <div class="pop-up">
-        <h1> Fontastic </h1>
-        <h2>Change Font</h2>
+        <h2> Font Customizer </h2>
+        <h3>Font</h3>
         <input type="text" id="font" class="font-field" placeholder="Times New Roman">
-        <h2>Change Size</h2>
-        <input type="text" id="size" class="size-field" placeholder = "30">
-        <h2>Change Color</h2>
+        <h3>
+            Change Size
+            <span class="current-font-size"> ( - )</span>
+        </h3>
+        <!-- <input type="text" id="size" class="size-field" placeholder = "30"> -->
+        <input type="range" min="1" max="100" value="50" class="slider" id="font-size-slider">
+        <h3>Change Color</h3>
         <input type="text" id="color" class="color-field" placeholder="red">
         <br>
         <br>
-        <input type="submit" id="submit" class="main-button" value = 'Make Changes'>
+        <input type="submit" id="submit" class="main-button" value='UPDATE FONT'>
     </div>
     <script src="content.js"></script>
 </body>

@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "My Extension",
+  "name": "Font Changer",
   "version": "1.0",
   "action" : {
     "default_popup": "index.html",
@@ -10,6 +10,12 @@
       "48": "/images/f_icon48.png",
       "128": "/images/f_icon128.png"
     }
+  },
+  "icons": {
+    "16": "/images/f_icon16.png",
+    "32": "/images/f_icon32.png",
+    "48": "/images/f_icon48.png",
+    "128": "/images/f_icon128.png"
   },
   "background" : {
     "service_worker" : "background.js"
