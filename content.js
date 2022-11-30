@@ -1,9 +1,14 @@
 let submitButton = document.querySelector('.main-button');
+let fontSlider = document.querySelector('#font-size-slider');
 
 submitButton.addEventListener("click", async () => {
-    let fontVal = document.querySelector('.font-field').value;
-    let sizeVal = document.querySelector('.size-field').value;
+    let fontVal = document.querySelector('.font-dropdown');
+    // let sizeVal = document.querySelector('.size-field').value;
+    let sizeVal = document.querySelector('#font-size-slider').value;
     let colorVal = document.querySelector('.color-field').value;
+
+    console.log('sizeVal: ', sizeVal)
+    console.log('fontVal: ', fontVal)
 
     userInput = [fontVal, sizeVal, colorVal];
 
@@ -16,6 +21,12 @@ submitButton.addEventListener("click", async () => {
     });
 });
 
+fontSlider.addEventListener('change', (event) => {
+    let sizeVal = document.querySelector('#font-size-slider').value;
+    let currentFontSize = document.querySelector('.current-font-size');
+
+    currentFontSize.innerHTML = '( ' + sizeVal + 'px )';
+})
     
 function updateCSS(inputArr){
     // grab all divs and update values
