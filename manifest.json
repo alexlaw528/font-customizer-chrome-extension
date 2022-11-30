@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "My Extension",
+  "version": "1.0",
+  "action" : {
+    "default_popup": "index.html",
+    "default_icon":{
+      "16": "/images/f_icon16.png",
+      "32": "/images/f_icon32.png",
+      "48": "/images/f_icon48.png",
+      "128": "/images/f_icon128.png"
+    }
+  },
+  "background" : {
+    "service_worker" : "background.js"
+  },
+  "permissions":["activeTab", "storage", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at" : "document_idle",
+      "js":["content.js"]
+    }
+  ]
+}
+
